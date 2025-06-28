@@ -1,0 +1,423 @@
+/* CSS cho các loại bảng trong ứng dụng */
+
+/* Bảng    */
+.cart-table {
+  width: 80%; /* Chiều rộng bảng */
+  margin: 20px auto; /* Căn giữa bảng */
+  border-collapse: collapse;
+  font-size: 16px; /* Kích thước chữ */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cart-table th,
+.cart-table td {
+  padding: 15px; /* Khoảng cách trong ô */
+  border: 1px solid #e9ecef; /* Đường viền ô */
+  text-align: center; /* Căn giữa nội dung */
+  vertical-align: middle; /* Căn giữa theo chiều dọc */
+  height: 100px; /* Chiều cao cố định cho các hàng */
+}
+
+.cart-table td img {
+  width: 80px; /* Chiều rộng cố định cho hình ảnh */
+  height: 80px; /* Chiều cao cố định cho hình ảnh */
+  object-fit: cover; /* Đảm bảo hình ảnh không bị méo */
+  display: block;
+  margin: 0 auto; /* Căn giữa hình ảnh */
+}
+
+.cart-table th {
+  background-color: #3498db; /* Màu nền tiêu đề */
+  color: white; /* Màu chữ tiêu đề */
+  font-weight: bold;
+}
+
+.cart-table tr:nth-child(even) {
+  background-color: #f8f9fa; /* Màu nền cho các dòng chẵn */
+}
+
+.cart-table tr:hover {
+  background-color: #e9ecef; /* Màu nền khi hover */
+}
+
+/* Đặt chiều rộng cố định cho các cột */
+.cart-table th:nth-child(1),
+.cart-table td:nth-child(1) {
+  width: 25%; /* Cột "Sản phẩm" nhỏ hơn */
+}
+
+.cart-table th:nth-child(2),
+.cart-table td:nth-child(2) {
+  width: 15%; /* Cột "Hình ảnh" */
+}
+
+.cart-table th:nth-child(3),
+.cart-table td:nth-child(3) {
+  width: 20%; /* Cột "Đơn giá" lớn hơn */
+  font-size: 16px; /* Kích thước chữ bình thường */
+  font-weight: normal; /* Không làm chữ đậm */
+  color: #333; /* Màu chữ bình thường */
+}
+
+.cart-table th:nth-child(4),
+.cart-table td:nth-child(4) {
+  width: 10%; /* Cột "SL" */
+}
+
+.cart-table th:nth-child(5),
+.cart-table td:nth-child(5) {
+  width: 20%; /* Cột "Thành tiền" */
+}
+
+.cart-table th:nth-child(6),
+.cart-table td:nth-child(6) {
+  width: 10%; /* Cột "Xóa" */
+}
+
+/* Bảng hóa đơn và thời gian làm việc */
+.bills-table,
+.working-time-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  font-size: 14px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+}
+
+.bills-table th,
+.bills-table td,
+.working-time-table th,
+.working-time-table td {
+  padding: 10px;
+  border: 1px solid #e9ecef;
+  text-align: left;
+  vertical-align: middle;
+  contain: content;
+}
+
+.bills-table th,
+.working-time-table th {
+  background-color: #3498db;
+  color: white;
+  font-weight: 500;
+}
+
+.bills-table tr:nth-child(even),
+.working-time-table tr:nth-child(even) {
+  background-color: #f8f9fa;
+}
+
+.bills-table tr:hover,
+.working-time-table tr:hover {
+  background-color: #e9ecef;
+}
+
+/* Trạng thái hoạt động */
+.active-status {
+  color: #27ae60;
+  font-weight: bold;
+  will-change: contents;
+  transition: color 0.2s ease;
+}
+
+/* Select trong bảng */
+.status-select {
+  padding: 4px 8px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 13px;
+  will-change: contents;
+  transition: border-color 0.2s ease;
+}
+
+/* CSS cho các nút dưới bảng giỏ hàng */
+.cart-buttons {
+  display: flex;
+  justify-content: center; /* Căn giữa các nút dưới bảng */
+  margin-top: 20px; /* Khoảng cách giữa bảng và nút */
+  margin-top: 20px; /* Khoảng cách hợp lý giữa bảng và nút */
+}
+
+.cart-buttons .btn {
+  background-color: #3498db; /* Màu nền cho nút */
+  color: white; /* Màu chữ */
+  padding: 15px 30px; /* Kích thước nút */
+  font-size: 16px; /* Kích thước chữ */
+  border: none;
+  border-radius: 5px; /* Bo góc nút */
+  text-decoration: none;
+  margin: 0 10px; /* Khoảng cách giữa các nút */
+  width: 200px; /* Chiều rộng cố định */
+  text-align: center; /* Căn giữa chữ trong nút */
+  transition: all 0.3s;
+}
+
+.cart-buttons .btn:hover {
+  background-color: #2980b9; /* Màu nền khi hover */
+  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+.cart-buttons .btn.checkout {
+  background-color: #27ae60; /* Màu xanh cho nút "Thanh toán" */
+}
+
+.cart-buttons .btn.checkout:hover {
+  background-color: #1e8449; /* Màu xanh đậm khi hover */
+}
+
+/* CSS cho các nút */
+.action-buttons {
+  display: flex;
+  justify-content: flex-end; /* Căn nút về bên phải */
+  margin-top: 20px; /* Khoảng cách giữa bảng và nút */
+}
+
+.action-buttons .btn {
+  background-color: #3498db; /* Màu nền cho nút */
+  color: white; /* Màu chữ */
+  padding: 10px 20px; /* Kích thước nút */
+  font-size: 16px; /* Kích thước chữ */
+  border: none;
+  border-radius: 5px; /* Bo góc nút */
+  text-decoration: none;
+  margin-left: 10px; /* Khoảng cách giữa các nút */
+  width: 150px; /* Chiều rộng cố định */
+  text-align: center; /* Căn giữa chữ trong nút */
+  transition: all 0.3s;
+}
+
+.action-buttons .btn:hover {
+  background-color: #2980b9; /* Màu nền khi hover */
+  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+.action-buttons .btn.checkout {
+  background-color: #27ae60; /* Màu xanh cho nút "Thanh toán" */
+}
+
+.action-buttons .btn.checkout:hover {
+  background-color: #1e8449; /* Màu xanh đậm khi hover */
+}
+
+/* CSS cho hóa đơn */
+.invoice {
+  max-width: 900px; /* Tăng chiều rộng hóa đơn */
+  margin: 20px auto; /* Căn giữa hóa đơn */
+  background-color: #fff;
+  padding: 30px; /* Tăng khoảng cách bên trong */
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Tăng độ đổ bóng */
+  font-size: 16px; /* Tăng kích thước chữ */
+  line-height: 1.6; /* Tăng khoảng cách dòng */
+}
+
+.invoice-header {
+  text-align: center;
+  margin-bottom: 30px; /* Tăng khoảng cách dưới tiêu đề */
+}
+
+.invoice-header h2 {
+  font-size: 28px; /* Tăng kích thước tiêu đề */
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.invoice-header h3 {
+  font-size: 20px; /* Tăng kích thước tên cửa hàng */
+  margin-bottom: 5px;
+}
+
+.invoice-items table {
+  width: 100%; /* Đặt chiều rộng bảng hóa đơn */
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+.invoice-items th,
+.invoice-items td {
+  padding: 15px; /* Tăng khoảng cách trong ô */
+  border: 1px solid #e9ecef; /* Đường viền ô */
+  text-align: center; /* Căn giữa nội dung */
+}
+
+.invoice-items th {
+  background-color: #3498db; /* Màu nền tiêu đề bảng */
+  color: white; /* Màu chữ tiêu đề */
+  font-weight: bold;
+}
+
+.invoice-items tr:nth-child(even) {
+  background-color: #f8f9fa; /* Màu nền cho các dòng chẵn */
+}
+
+.invoice-footer {
+  text-align: center;
+  margin-top: 20px; /* Tăng khoảng cách trên */
+  font-size: 14px; /* Kích thước chữ nhỏ hơn */
+  color: #555;
+}
+
+invoice-footer p {
+  margin: 5px 0;
+}
+
+.invoice-footer .add-to-cart {
+  background-color: #3498db;
+  color: white;
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  margin: 10px 5px;
+  display: inline-block;
+  transition: all 0.3s;
+}
+
+.invoice-footer .add-to-cart:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* CSS cho các nút trong giỏ hàng */
+.add-to-cart,
+.checkout-btn {
+  background-color: #3498db; /* Màu nền cho nút */
+  color: white; /* Màu chữ */
+  padding: 12px 20px; /* Kích thước nút */
+  font-size: 16px; /* Kích thước chữ */
+  border: none;
+  border-radius: 5px; /* Bo góc nút */
+  text-decoration: none;
+  margin-left: 10px; /* Khoảng cách giữa các nút */
+  width: 180px; /* Chiều rộng cố định */
+  text-align: center; /* Căn giữa chữ trong nút */
+  display: inline-block; /* Đảm bảo nút hiển thị đúng */
+  transition: all 0.3s;
+}
+
+.add-to-cart:hover {
+  background-color: #2980b9; /* Màu nền khi hover */
+  transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+.checkout-btn {
+  background-color: #27ae60; /* Màu xanh cho nút "Thanh toán" */
+}
+
+.checkout-btn:hover {
+  background-color: #1e8449; /* Màu xanh đậm khi hover */
+}
+
+/* CSS cho nút "Thêm vào giỏ" */
+.add-to-cart-btn {
+  background-color: #3498db; /* Màu nền */
+  color: white; /* Màu chữ */
+  padding: 10px 0; /* Tăng chiều cao nút */
+  font-size: 14px; /* Kích thước chữ */
+  border: none;
+  border-radius: 0 0 8px 8px; /* Bo góc dưới để khớp với thẻ sản phẩm */
+  text-decoration: none;
+  display: block; /* Đảm bảo nút chiếm toàn bộ chiều rộng */
+  width: 100%; /* Chiều rộng 100% để full viền */
+  text-align: center; /* Căn giữa chữ trong nút */
+  box-sizing: border-box; /* Đảm bảo padding không làm tràn viền */
+  margin-top: auto; /* Đẩy nút xuống cuối thẻ */
+  transition: all 0.3s;
+}
+
+.add-to-cart-btn:hover {
+  background-color: #2980b9; /* Màu nền khi hover */
+  transform: scale(1.02); /* Hiệu ứng phóng to nhẹ khi hover */
+}
+
+/* CSS cho thẻ sản phẩm */
+.product-card {
+  width: 220px; /* Đặt chiều rộng cố định cho thẻ sản phẩm */
+  height: 300px; /* Đặt chiều cao cố định để các thẻ đều nhau */
+  margin: 10px; /* Khoảng cách giữa các thẻ */
+  text-align: center; /* Căn giữa nội dung trong thẻ */
+  overflow: hidden; /* Đảm bảo nội dung không bị tràn */
+  border: 1px solid #ddd; /* Đường viền cho thẻ sản phẩm */
+  border-radius: 8px; /* Bo góc thẻ sản phẩm */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Đổ bóng nhẹ */
+  box-sizing: border-box; /* Đảm bảo padding không làm tràn viền */
+  background-color: #fff; /* Màu nền thẻ sản phẩm */
+  display: flex;
+  flex-direction: column; /* Sắp xếp nội dung theo cột */
+  justify-content: space-between; /* Căn đều nội dung trong thẻ */
+}
+
+.product-card img {
+  width: 100%; /* Hình ảnh chiếm toàn bộ chiều rộng thẻ */
+  height: auto; /* Tự động điều chỉnh chiều cao theo tỷ lệ */
+  max-height: 120px; /* Giảm chiều cao tối đa của hình ảnh */
+  object-fit: contain; /* Đảm bảo hình ảnh không bị cắt */
+  border-radius: 8px 8px 0 0; /* Bo góc trên của hình ảnh */
+}
+
+.product-card h3,
+.product-card p {
+  margin: 10px 0; /* Khoảng cách giữa các phần tử */
+}
+
+.product-card h3 {
+  font-size: 16px; /* Kích thước chữ cho tên sản phẩm */
+  font-weight: bold;
+  margin: 10px 0; /* Khoảng cách trên và dưới */
+  min-height: 40px; /* Đặt chiều cao tối thiểu để căn thẳng hàng */
+}
+
+.product-card p {
+  font-size: 14px; /* Kích thước chữ cho giá tiền */
+  color: #e74c3c; /* Màu chữ đỏ cho giá tiền */
+  margin: 5px 0; /* Khoảng cách trên và dưới */
+}
+
+/* CSS cho thông báo thêm vào giỏ hàng */
+.add-to-cart-notification {
+  position: fixed; /* Đặt vị trí cố định */
+  bottom: 20px; /* Đưa thông báo xuống thấp hơn */
+  left: 50%; /* Căn giữa theo chiều ngang */
+  transform: translateX(-50%); /* Căn giữa chính xác */
+  background-color: #27ae60; /* Màu nền xanh */
+  color: white; /* Màu chữ */
+  padding: 15px 30px; /* Khoảng cách bên trong */
+  border-radius: 5px; /* Bo góc thông báo */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Đổ bóng */
+  font-size: 16px; /* Kích thước chữ */
+  z-index: 9999; /* Đảm bảo thông báo nằm trên cùng */
+  display: none; /* Mặc định ẩn thông báo */
+  animation: fadeInOut 3s ease-in-out; /* Hiệu ứng xuất hiện và biến mất */
+}
+
+/* Hiệu ứng fade in và fade out */
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  10%,
+  90% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+}
+
+/* Tránh flickering khi cập nhật */
+.bills-table tr,
+.working-time-table tr {
+  transition: background-color 0.2s ease;
+}

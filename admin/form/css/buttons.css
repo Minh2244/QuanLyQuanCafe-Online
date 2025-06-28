@@ -1,0 +1,126 @@
+/* CSS cho các loại nút trong ứng dụng */
+
+/* Nút thêm vào giỏ */
+.add-to-cart {
+  background-color: #3498db;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.3s;
+  font-size: 12px;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.add-to-cart:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Nút thanh toán */
+.checkout-btn {
+  background-color: #27ae60;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.3s;
+  display: inline-block;
+  text-decoration: none;
+}
+
+.checkout-btn:hover {
+  background-color: #219653;
+  transform: scale(1.05);
+}
+
+/* Nút xem chi tiết */
+.detail-btn {
+  background-color: #3498db;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  transition: all 0.3s;
+  display: inline-block;
+  margin-right: 5px;
+}
+
+.detail-btn:hover {
+  background-color: #2980b9;
+  transform: scale(1.05);
+}
+
+/* Nút xóa */
+.delete-btn {
+  background-color: #e74c3c;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  display: inline-block;
+  transition: all 0.3s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #c0392b;
+  margin-right: 5px;
+}
+
+.delete-btn:hover {
+  background-color: #c0392b;
+  transform: scale(1.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.delete-btn i {
+  margin-right: 5px;
+}
+
+/* Nút sửa */
+.edit-btn {
+  background-color: #f39c12;
+  color: white;
+  padding: 4px 8px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 12px;
+  display: inline-block;
+  transition: all 0.3s;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  border: 1px solid #d35400;
+  margin-right: 5px;
+}
+
+.edit-btn:hover {
+  background-color: #d35400;
+  transform: scale(1.05);
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.3);
+}
+
+.edit-btn i {
+  margin-right: 5px;
+}
+
+/* Nút đóng */
+.close-alert {
+  position: absolute;
+  top: 8px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 18px;
+  color: inherit;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.close-alert:hover {
+  opacity: 1;
+}

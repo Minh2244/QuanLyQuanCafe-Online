@@ -1,0 +1,43 @@
+/* File CSS chính import tất cả các module CSS khác */
+
+/* Import layout */
+@import url("layout.css");
+
+/* Import components */
+@import url("components.css");
+
+/* Import tables */
+@import url("tables.css");
+
+/* Import buttons */
+@import url("buttons.css");
+
+/* Highlight link trong navbar - đã tắt theo yêu cầu */
+.nav-link.highlight-link {
+  background-color: transparent;
+  color: inherit !important;
+  font-weight: normal;
+  position: relative;
+}
+
+.nav-link.highlight-link:hover {
+  background-color: inherit !important;
+  color: inherit !important;
+}
+
+/* Tắt hiệu ứng nhấp nháy cho liên kết nổi bật */
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+  70% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(40, 167, 69, 0);
+  }
+}
+
+.nav-link.highlight-link {
+  animation: none;
+}

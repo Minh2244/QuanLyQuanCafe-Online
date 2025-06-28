@@ -1,0 +1,160 @@
+/* CSS cho header */
+.header {
+  background-color: #4a2c2a;
+  color: #fff;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.logo h1 {
+  margin: 0;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+}
+
+.nav li {
+  margin-right: 20px;
+  position: relative;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.nav a:hover {
+  color: #f8c471;
+}
+
+.highlight-menu {
+  background-color: #28a745;
+  padding: 8px 15px;
+  border-radius: 4px;
+  color: #fff !important;
+  font-weight: bold;
+  transition: background-color 0.3s !important;
+}
+
+.highlight-menu:hover {
+  background-color: #218838;
+  color: #fff !important;
+}
+
+.highlight-menu i {
+  margin-right: 5px;
+}
+
+.badge {
+  background-color: #e74c3c;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  margin-left: 5px;
+}
+
+.user-info {
+  font-size: 14px;
+}
+
+/* Thông báo banner */
+.notification-banner {
+  background-color: #fff3cd;
+  border-left: 4px solid #ffc107;
+  color: #856404;
+  padding: 15px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 4px;
+}
+
+.notification-content {
+  display: flex;
+  align-items: center;
+}
+
+.notification-content i {
+  margin-right: 10px;
+  font-size: 18px;
+}
+
+.view-orders-btn {
+  background-color: #4a2c2a;
+  color: #fff;
+  padding: 8px 15px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.view-orders-btn:hover {
+  background-color: #3a1c1a;
+}
+
+.notification-close {
+  background: none;
+  border: none;
+  color: #856404;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 0;
+  margin-left: 10px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .header {
+    flex-direction: column;
+    padding: 10px;
+  }
+
+  .logo {
+    margin-bottom: 10px;
+  }
+
+  .nav ul {
+    flex-direction: column;
+  }
+
+  .nav li {
+    margin-right: 0;
+    margin-bottom: 10px;
+  }
+
+  .user-info {
+    margin-top: 10px;
+  }
+
+  .notification-banner {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .notification-content {
+    margin-bottom: 10px;
+  }
+
+  .view-orders-btn {
+    margin-bottom: 10px;
+  }
+}
