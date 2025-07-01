@@ -1,0 +1,183 @@
+.thongke-container {
+  padding: 20px;
+  background-color: #f5f5f5;
+}
+
+.thongke-container h2 {
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.date-picker {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.date-picker input[type="date"] {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+}
+
+.status-stats {
+  margin-bottom: 40px;
+}
+
+.stats-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.stats-section h4 {
+  color: #444;
+  margin-bottom: 15px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.stats-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.stats-table th,
+.stats-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+}
+
+.stats-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.sales-details {
+  margin-bottom: 40px;
+}
+
+.sales-section {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 20px;
+}
+
+.total-revenue {
+  margin: 15px 0;
+  padding: 10px;
+  background-color: #f8f9fa;
+  border-radius: 4px;
+  font-size: 18px;
+}
+
+.sales-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+.sales-table th,
+.sales-table td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #eee;
+  vertical-align: middle;
+}
+
+.sales-table th {
+  background-color: #f8f9fa;
+  font-weight: 600;
+}
+
+.product-image {
+  width: 50px;
+  height: 50px;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.total-stats {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.total-stats h3 {
+  color: #333;
+  font-size: 24px;
+  margin: 0;
+}
+
+/* Status colors */
+.stats-table tr[data-status="pending"] td:first-child {
+  color: #ffc107;
+}
+
+.stats-table tr[data-status="confirmed"] td:first-child {
+  color: #17a2b8;
+}
+
+.stats-table tr[data-status="shipping"] td:first-child {
+  color: #007bff;
+}
+
+.stats-table tr[data-status="received"] td:first-child {
+  color: #28a745;
+}
+
+.stats-table tr[data-status="cancelled"] td:first-child {
+  color: #dc3545;
+}
+
+/* Payment method colors */
+.sales-table td:nth-child(6) {
+  font-weight: 600;
+}
+
+.sales-table td:nth-child(6)[data-payment="cod"],
+.sales-table td:nth-child(6)[data-payment="cash"] {
+  color: #28a745;
+}
+
+.sales-table td:nth-child(6)[data-payment="bank"],
+.sales-table td:nth-child(6)[data-payment="banking"] {
+  color: #007bff;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+  .sales-table {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 768px) {
+  .thongke-container {
+    padding: 10px;
+  }
+
+  .stats-section,
+  .sales-section {
+    padding: 15px;
+  }
+
+  .total-revenue {
+    font-size: 16px;
+  }
+
+  .total-stats h3 {
+    font-size: 20px;
+  }
+}

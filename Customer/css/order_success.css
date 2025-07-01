@@ -1,0 +1,209 @@
+.order-success {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.success-icon {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.success-icon i {
+  font-size: 80px;
+  color: #28a745;
+}
+
+.order-success h2 {
+  text-align: center;
+  color: #333;
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+.order-success p {
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
+  font-size: 16px;
+}
+
+.order-info {
+  background: #f8f9fa;
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 30px;
+}
+
+.order-info h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.info-group {
+  display: flex;
+  margin-bottom: 10px;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.info-group:last-child {
+  border-bottom: none;
+}
+
+.info-group label {
+  width: 180px;
+  color: #666;
+  font-weight: 500;
+}
+
+.info-group span {
+  flex: 1;
+  color: #333;
+}
+
+.order-items {
+  margin-top: 30px;
+}
+
+.order-items h3 {
+  color: #333;
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+
+.items-list {
+  border: 1px solid #eee;
+  border-radius: 8px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  border-bottom: 1px solid #eee;
+}
+
+.order-item:last-child {
+  border-bottom: none;
+}
+
+.item-name {
+  color: #222;
+  font-weight: 500;
+}
+
+.item-price {
+  color: #1976d2;
+  font-weight: 600;
+}
+
+.order-total {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 16px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+
+.total-amount {
+  color: #e53935;
+  font-weight: 700;
+}
+
+.success-actions {
+  text-align: center;
+  margin-top: 30px;
+}
+
+.btn-primary {
+  background: #0d6efd;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.2s;
+}
+
+.btn-primary:hover {
+  background: #0b5ed7;
+}
+
+.payment-info {
+  margin-top: 30px;
+  padding: 20px;
+  background: #fff3cd;
+  border: 1px solid #ffeeba;
+  border-radius: 8px;
+}
+
+.payment-info h3 {
+  color: #1976d2;
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 8px;
+}
+
+.bank-info {
+  background: white;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+.bank-info p {
+  margin: 8px 0;
+  color: #333;
+}
+
+/* Làm đậm và rõ màu chữ trong bảng thông tin đơn hàng */
+.order-info-table td,
+.order-info-table th {
+  color: #222 !important;
+  font-weight: 600;
+  letter-spacing: 0.2px;
+  background: transparent !important;
+  text-shadow: none !important;
+  opacity: 1 !important;
+}
+
+.order-info-table tr {
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.order-info-table {
+  background: #f8f9fa;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .order-success {
+    margin: 20px;
+    padding: 20px;
+  }
+
+  .info-group {
+    flex-direction: column;
+  }
+
+  .info-group label {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+
+  .order-item {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  .order-total {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+  }
+}

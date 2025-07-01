@@ -1,0 +1,387 @@
+/* CSS cho trang thanh toán chuyển khoản - Màu sắc hiện đại */
+.payment-container {
+  max-width: 800px;
+  margin: 30px auto;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.payment-box {
+  text-align: center;
+}
+
+/* Header thanh toán */
+.payment-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.payment-icon {
+  font-size: 28px;
+  color: #3498db;
+  margin-right: 15px;
+  background-color: #eef8ff;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.payment-header h2 {
+  color: #2c3e50;
+  margin: 0;
+  font-weight: 600;
+}
+
+/* Các bước thanh toán */
+.payment-steps {
+  display: flex;
+  justify-content: center;
+  margin: 30px 0;
+  position: relative;
+}
+
+.payment-steps::before {
+  content: "";
+  position: absolute;
+  top: 25px;
+  left: 25%;
+  right: 25%;
+  height: 2px;
+  background-color: #e0e0e0;
+  z-index: 1;
+}
+
+.step {
+  position: relative;
+  z-index: 2;
+  width: 120px;
+  text-align: center;
+}
+
+.step-icon {
+  width: 50px;
+  height: 50px;
+  background-color: #f5f5f5;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 10px;
+  border: 2px solid #e0e0e0;
+  color: #95a5a6;
+  font-size: 18px;
+  transition: all 0.3s ease;
+}
+
+.step.active .step-icon {
+  background-color: #eef8ff;
+  border-color: #3498db;
+  color: #3498db;
+  box-shadow: 0 0 0 5px rgba(52, 152, 219, 0.15);
+}
+
+.step-text {
+  color: #7f8c8d;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.step.active .step-text {
+  color: #3498db;
+  font-weight: 600;
+}
+
+.qr-section {
+  margin: 30px 0;
+}
+
+.qr-section h3 {
+  color: #3498db;
+  font-size: 18px;
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.qr-section h3 i {
+  margin-right: 10px;
+}
+
+.qr-container {
+  position: relative;
+  display: inline-block;
+  margin: 0 auto;
+}
+
+.qr-image {
+  max-width: 280px;
+  border: 1px solid #e0e0e0;
+  padding: 10px;
+  background-color: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.qr-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(52, 152, 219, 0.05);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: 8px;
+}
+
+.qr-container:hover .qr-overlay {
+  opacity: 1;
+}
+
+.qr-overlay span {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 8px 16px;
+  border-radius: 20px;
+  font-weight: 600;
+  color: #3498db;
+  font-size: 14px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-info {
+  background-color: #f8f9fa;
+  padding: 25px;
+  border-radius: 10px;
+  margin: 25px auto;
+  max-width: 500px;
+  text-align: left;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.03);
+  border: 1px solid #e9ecef;
+}
+
+/* Tiêu đề thông tin chuyển khoản */
+.payment-info-title {
+  font-size: 18px;
+  color: #2c3e50;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #e9ecef;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.payment-info-title i {
+  margin-right: 10px;
+  color: #3498db;
+}
+
+.info-row {
+  display: flex;
+  margin: 15px 0;
+  align-items: center;
+  position: relative;
+}
+
+.info-row .label {
+  min-width: 150px;
+  font-weight: 600;
+  color: #495057;
+  display: flex;
+  align-items: center;
+}
+
+.info-row .label i {
+  width: 20px;
+  margin-right: 8px;
+  color: #3498db;
+}
+
+.info-row .value {
+  color: #2c3e50;
+  flex: 1;
+}
+
+/* Định dạng cho các giá trị quan trọng */
+.info-row .value.highlight {
+  color: #3498db;
+  font-weight: 500;
+}
+
+/* Nút sao chép */
+.copy-btn {
+  background-color: transparent;
+  border: none;
+  color: #95a5a6;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 10px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.copy-btn:hover {
+  color: #3498db;
+  background-color: #eef8ff;
+}
+
+.copy-btn i.fa-check {
+  color: #2ecc71;
+}
+
+/* Số tiền nổi bật */
+.amount-row {
+  margin: 20px 0;
+  padding: 15px;
+  background-color: #e8f4fd;
+  border-radius: 8px;
+  border-left: 4px solid #3498db;
+}
+
+.amount-row .label {
+  color: #2c3e50;
+  font-size: 16px;
+}
+
+.amount-row .value.amount {
+  color: #2980b9;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+/* Thông báo */
+.payment-notice {
+  display: flex;
+  align-items: center;
+  background-color: #fff8e1;
+  padding: 15px;
+  border-radius: 8px;
+  margin: 20px auto;
+  max-width: 500px;
+  text-align: left;
+  border-left: 4px solid #ffc107;
+}
+
+.payment-notice i {
+  font-size: 24px;
+  color: #ffc107;
+  margin-right: 15px;
+}
+
+.payment-notice p {
+  margin: 0;
+  color: #795548;
+  font-size: 14px;
+}
+
+/* Nút thanh toán */
+.payment-actions {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-confirm {
+  background-color: #2ecc71;
+  color: white;
+  border: none;
+  padding: 12px 28px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 5px rgba(46, 204, 113, 0.2);
+  display: flex;
+  align-items: center;
+}
+
+.btn-confirm i {
+  margin-right: 8px;
+}
+
+.btn-confirm:hover {
+  background-color: #27ae60;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(46, 204, 113, 0.3);
+}
+
+.btn-orders {
+  color: #3498db;
+  text-decoration: none;
+  font-size: 15px;
+  font-weight: 500;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+}
+
+.btn-orders i {
+  margin-right: 8px;
+}
+
+.btn-orders:hover {
+  color: #2980b9;
+  text-decoration: underline;
+}
+
+/* Ẩn dòng nội dung chuyển khoản nếu cần */
+.info-row.hide {
+  display: none !important;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .payment-steps {
+    flex-wrap: wrap;
+  }
+
+  .payment-steps::before {
+    display: none;
+  }
+
+  .step {
+    margin-bottom: 15px;
+  }
+
+  .payment-info {
+    padding: 15px;
+  }
+
+  .info-row {
+    flex-wrap: wrap;
+  }
+
+  .info-row .label {
+    margin-bottom: 5px;
+    min-width: 100%;
+  }
+
+  .info-row .value {
+    margin-left: 28px;
+  }
+
+  .amount-row .value {
+    margin-left: 0;
+  }
+
+  .copy-btn {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+}

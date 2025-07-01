@@ -1,0 +1,121 @@
+.register-form {
+  max-width: 380px;
+  margin: 40px auto;
+  padding: 32px 28px 24px 28px;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 8px 32px rgba(44, 24, 16, 0.13);
+  transition: box-shadow 0.3s;
+}
+
+.register-form:hover {
+  box-shadow: 0 12px 40px rgba(44, 24, 16, 0.18);
+}
+
+.register-form h2 {
+  text-align: center;
+  color: #1a2233;
+  margin-bottom: 28px;
+  font-size: 2rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+}
+
+.form-group {
+  margin-bottom: 18px;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 7px;
+  color: #222;
+  font-weight: 600;
+  font-size: 15px;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 11px 14px;
+  border: 1.5px solid #e0e0e0;
+  border-radius: 10px;
+  font-size: 15px;
+  background: #fafbfc;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.form-group input:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.08);
+  background: #fff;
+}
+
+.required {
+  color: #dc3545;
+  margin-left: 3px;
+}
+
+.btn-register {
+  background: linear-gradient(90deg, #007bff 0%, #0056b3 100%);
+  color: white;
+  border: none;
+  padding: 12px 0;
+  border-radius: 25px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  width: 100%;
+  margin-top: 12px;
+  margin-bottom: 8px;
+  box-shadow: 0 2px 8px rgba(0, 123, 255, 0.08);
+  transition: background 0.2s, transform 0.18s;
+}
+
+.btn-register:hover {
+  background: linear-gradient(90deg, #0056b3 0%, #007bff 100%);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 18px;
+  font-size: 15px;
+}
+
+.login-link a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.2s;
+}
+
+.login-link a:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+.error-message,
+.success-message {
+  border-radius: 8px;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  font-size: 15px;
+}
+
+.error-message {
+  color: #dc3545;
+  background: #f8d7da;
+}
+
+.success-message {
+  color: #28a745;
+  background: #d4edda;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+  .register-form {
+    max-width: 98vw;
+    margin: 10px;
+    padding: 18px 6px;
+  }
+}

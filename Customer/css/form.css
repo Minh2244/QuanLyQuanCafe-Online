@@ -1,0 +1,231 @@
+/* Form đẹp, hiện đại, dùng chung cho các form nhập liệu */
+.form-modern {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+  padding: 120px 36px 32px 36px;
+  max-width: 400px;
+  width: 100%;
+  margin: 0 auto 40px auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.form-modern h2 {
+  text-align: center;
+  color: #222;
+  font-size: 1.5rem;
+  margin-bottom: 18px;
+  font-weight: 700;
+}
+
+.form-modern .form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.form-modern .form-group label {
+  color: #444;
+  font-weight: 500;
+  font-size: 15px;
+}
+
+.form-modern .form-group input,
+.form-modern .form-group textarea {
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  padding: 10px 12px;
+  font-size: 15px;
+  background: #fafbfc;
+  transition: border-color 0.2s;
+}
+
+.form-modern .form-group input:focus,
+.form-modern .form-group textarea:focus {
+  border-color: #4f8cff;
+  outline: none;
+  background: #fff;
+}
+
+.form-modern .form-group textarea {
+  min-height: 60px;
+  resize: vertical;
+}
+
+.form-modern .btn-main {
+  background: linear-gradient(90deg, #4f8cff 0%, #38c6d9 100%);
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  padding: 12px 0;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s;
+}
+
+.form-modern .btn-main:hover {
+  background: linear-gradient(90deg, #38c6d9 0%, #4f8cff 100%);
+}
+
+.form-modern .form-link {
+  display: block;
+  text-align: center;
+  margin-top: 10px;
+  color: #4f8cff;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 15px;
+  transition: color 0.2s;
+}
+
+.form-modern .form-link:hover {
+  color: #222;
+}
+
+@media (max-width: 600px) {
+  .form-modern {
+    max-width: 98vw;
+    padding: 16px 6px;
+  }
+}
+
+/* Form styles */
+.checkout-wrapper {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #333;
+  font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 1rem;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #4a90e2;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(74, 144, 226, 0.2);
+}
+
+.error-message {
+  color: #c00;
+  background: #fee;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+  white-space: pre-line;
+}
+
+.btn-main {
+  background: #4a90e2;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn-main:hover {
+  background: #357abd;
+}
+
+.form-link {
+  display: inline-block;
+  margin-top: 1rem;
+  color: #666;
+  text-decoration: none;
+}
+
+.form-link:hover {
+  color: #4a90e2;
+}
+
+/* Order history styles */
+.order-history {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.order-history h3 {
+  margin: 0 0 1rem;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.history-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.history-item {
+  border: 1px solid #eee;
+  border-radius: 4px;
+  padding: 1rem;
+}
+
+.order-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 0.5rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.product-info {
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+}
+
+.total {
+  text-align: right;
+  font-weight: 500;
+  color: #4a90e2;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .checkout-wrapper {
+    padding: 1rem;
+  }
+
+  .form-modern,
+  .order-history {
+    padding: 1rem;
+  }
+
+  .order-info {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+
+  .btn-main {
+    width: 100%;
+  }
+}
